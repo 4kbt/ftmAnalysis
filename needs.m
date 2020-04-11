@@ -14,6 +14,7 @@ Ntherm  = contains('thermometers', colr(:,needsColumn));
 Nboot   = contains('Disposable booties', colr(:,needsColumn));
 Nhome   = contains('Homemade Masks', colr(:,needsColumn));
 Nshield = contains('face shields', colr(:,needsColumn));
+Nprint  = contains('printed or makerspace', colr(:,needsColumn));
 
 
 
@@ -27,9 +28,10 @@ therm  = Ntherm(timedex);
 boot   = Nboot(timedex);
 home   = Nhome(timedex);
 shield = Nshield(timedex);
+print  = Nprint(timedex);
 
 %compute time-series
-ts = timeSeries( [time n95 mask glove gown sanit wipe therm boot home shield] ); 
+ts = timeSeries( [time n95 mask glove gown sanit wipe therm boot home shield print] ); 
 
 %pick off useful columns
 days = ts(:,1); %time

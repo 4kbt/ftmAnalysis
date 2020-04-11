@@ -7,13 +7,13 @@ fn = 'needs.dat'
 
 startDay = -14
 endDay = 12
-statCutoff = 10
+statCutoff = 21
 
 set key noauto
 
 set multiplot layout 6,2  title 'Recipient fraction Need enums. Errors are 1{/Symbol s}-population-proportion. Time in days of April'
 
-#set label 1 'PRELIMINARY' at screen 0.5,0.5 rotate by 45 center front textcolor rgb "#999999" font "Helvetica,80"
+set label 1 'PRELIMINARY' at screen 0.5,0.5 rotate by 60 center front textcolor rgb "#999999" font "Helvetica,80"
 
 set title 'N95'
 pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$3 :1/0):(sqrt( $3 * (1-$3) / $2 )) w yerr lt 3 pt 7 
@@ -44,6 +44,9 @@ pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$10 :1/0):(sqrt( $10 * (1-$10) /
 
 set title 'Face Shield'
 pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$12:1/0):(sqrt( $12 * (1-$12) / $2 )) w yerr lt 3 pt 7
+
+set title 'Face Shields (3D or maker)'
+pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$13:1/0):(sqrt( $13 * (1-$13) / $2 )) w yerr lt 3 pt 7
 
 
 set title 'Number of new entries daily'
