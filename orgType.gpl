@@ -1,0 +1,57 @@
+set term postscript enhanced solid color eps size 5,3
+set output 'orgType.eps'
+
+set colors classic
+
+fn = 'orgType.dat'
+
+startDay = -5.9
+endDay = 12
+statCutoff = 21
+
+set key noauto
+
+set multiplot layout 2,1  title 'Organization Type. Errors are 1{/Symbol s}-population-proportion. Time in days of April'
+
+set label 1 'PRELIMINARY' at screen 0.5,0.5 rotate by 30 center front textcolor rgb "#999999" font "Helvetica,50"
+
+set title 'Hospital'
+pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$3 :1/0):(sqrt( $3 * (1-$3) / $2 )) w yerr lt 3 pt 7 
+
+set title 'Surgical Mask'
+#pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$4 :1/0):(sqrt( $4 * (1-$4) / $2 )) w yerr lt 3 pt 7 
+
+set title 'Homemade Masks'
+#pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$11 :1/0):(sqrt( $11 * (1-$11) / $2 )) w yerr lt 3 pt 7 
+
+set title 'Gloves'
+#pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$5 :1/0):(sqrt( $5 * (1-$5) / $2 )) w yerr lt 3 pt 7
+
+set title 'Gowns'
+#pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$6 :1/0):(sqrt( $6 * (1-$6) / $2 )) w yerr lt 3 pt 7
+
+set title 'Hand Sanitizer'
+#pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$7 :1/0):(sqrt( $7 * (1-$7) / $2 )) w yerr lt 3 pt 7
+
+set title 'Disinfecting Wipes'
+#pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$8 :1/0):(sqrt( $8 * (1-$8) / $2 )) w yerr lt 3 pt 7
+
+set title 'Thermometers'
+#pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$9 :1/0):(sqrt( $9 * (1-$9) / $2 )) w yerr lt 3 pt 7
+
+set title 'Disposable Booties'
+#pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$10 :1/0):(sqrt( $10 * (1-$10) / $2 )) w yerr lt 3 pt 7
+
+set title 'Face Shield'
+#pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$12:1/0):(sqrt( $12 * (1-$12) / $2 )) w yerr lt 3 pt 7
+
+set title 'Face Shields (3D or maker)'
+#pl [startDay:endDay][0:1] fn u 1:($2>statCutoff?$13:1/0):(sqrt( $13 * (1-$13) / $2 )) w yerr lt 3 pt 7
+
+
+set xlabel 'days of April'
+
+set title 'Number of approved entries daily'
+pl [startDay:endDay][0:] fn u 1:2  w lp lt -1 pt 7  
+
+unset multiplot
