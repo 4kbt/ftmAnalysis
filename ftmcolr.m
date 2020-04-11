@@ -24,7 +24,7 @@ Nsanit  = contains('sanitizer', colr(:,columnR));
 Nwipe   = contains('wipe', colr(:,columnR));
 Nhelp   = contains('help', colr(:,columnR));
 Ndesp   = contains('desperate', colr(:,columnR));
-Nout    = contains('out', colr(:,columnR));
+Nout    = contains('are out', colr(:,columnR));
 Nshield = contains('shield', colr(:,columnR));
 
 
