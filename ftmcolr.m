@@ -14,7 +14,7 @@ Ntime = Ntime - 737887+6;
 
 
 %current location of column R
-columnR = 3;
+columnR = 5;
 
 Ngown   = contains('gown', colr(:,columnR));
 Nn95    = contains('95'  , colr(:,columnR));
@@ -29,7 +29,7 @@ Nshield = contains('shield', colr(:,columnR));
 
 
 %handle out-of-order timestamps (has its own systematics, but alternative is worse)
-[S timedex] = sort(time);
+[S timedex] = sort(Ntime);
 time = Ntime(timedex);
 
 gown   = Ngown(timedex);

@@ -6,7 +6,7 @@ pkg load io
 
 
 %Preformat column r cellarray
-colr = [rawarr(:,1) rawarr(:,4) rawarr(:,18)];
+colr = [rawarr(:,1) rawarr(:,6) rawarr(:,13), rawarr(:,17), rawarr(:,20)];
 
 %Export.
 save 'columnR.dat' colr
