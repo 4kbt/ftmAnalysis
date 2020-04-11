@@ -1,19 +1,5 @@
-load('columnR.dat');
+preLoad
 
-colSmall = colr(3:end,:); %strip headers
-
-%Parse 'approved' column
-approved = logical(cellfun(@isequal , colSmall(:,1) , {'x'}));
-
-%Make time numbers again.
-Ntime= cell2mat (colSmall(:,2));
-
-%Make time in April units
-
-Ntime = Ntime - 737887+6;
-
-
-%current location of column R
 columnR = 5;
 
 Ngown   = contains('gown', colr(:,columnR));
@@ -27,10 +13,6 @@ Ndesp   = contains('desperate', colr(:,columnR));
 Nout    = contains('are out', colr(:,columnR));
 Nshield = contains('shield', colr(:,columnR));
 
-
-%handle out-of-order timestamps (has its own systematics, but alternative is worse)
-[S timedex] = sort(Ntime);
-time = Ntime(timedex);
 
 gown   = Ngown(timedex);
 n95    = Nn95(timedex) ;
