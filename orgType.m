@@ -1,10 +1,11 @@
 %I'm a bad man, but this begins to DRY out multiple analysis chains.
+loadApproved=1;
 preLoad
 
 %current location of column R
 orgColumn = 4;
 
-Nhospital = contains('hospital', colr(:,orgColumn));
+Nhospital = contains('hospital', colSmall(:,orgColumn));
 %Nn95    = contains('N95s'  , colr(:,orgColumn));
 %Nmask   = contains('Surgical masks', colr(:,orgColumn));
 %Nglove  = contains('gloves', colr(:,orgColumn));
