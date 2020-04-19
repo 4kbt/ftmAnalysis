@@ -1,0 +1,38 @@
+set term postscript enhanced solid color eps
+set output 'approvedPlot.eps'
+
+load 'dates.gpl'
+
+fn = 'approvedPlot.dat'
+
+startDay = -15 
+endDay = 19 
+statCutoff = 10
+
+set key noauto bottom left
+
+#set label 1 'PRELIMINARY' at screen 0.5,0.5 rotate by 30 center front textcolor rgb "#999999" font "Helvetica,50"
+
+set arrow 1 from 8.5,1 to 8.5,1000 lt 0 nohead
+set arrow 2 from 13.5,1 to 13.5,1000 lt 0 nohead
+
+set label 3 "GetUsPPE\ngoes internal" at 4,2.5 center front tc lt 9
+set arrow 3 from 6,2.5 to 8.5,2.5 lt 9 lw 2 head filled
+
+set label 4 "GetUsPPE\nadds link" at 15.7,2 center front tc lt 9
+set arrow 4 from 15,2.5 to 13.5,4 lt 9 lw 2 head filled
+
+set label 5 "Calling\nSeattle\nhospitals" at -7.7,4.5 center front tc lt 9
+set arrow 5 from -9,4 to -11.5,7 lt 9 lw 2 head filled
+
+set label 6 "National\nTV coverage" at -7.5,40 center front tc lt 9
+set arrow 6 from -8,50 to -8,250 lt 9 lw 2 head filled 
+
+set logsc y
+
+set title 'FindTheMasks database entries added each day'
+set xlabel 'date'
+set ylabel 'entries added each day'
+pl [startDay:endDay][]\
+	fn u 1:2 w p pt 7 lt -1 tit 'Total Entries' ,\
+	fn u 1:4 w p pt 7 lt 3 tit "Approved, April 19"
