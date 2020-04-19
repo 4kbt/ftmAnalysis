@@ -1,20 +1,21 @@
 %I'm a bad man, but this begins to DRY out multiple analysis chains.
+loadApproved = 1
 preLoad
 
 %current location of column R
 needsColumn = 3;
 
-Ngown   = contains('gown', colr(:,needsColumn));
-Nn95    = contains('N95s'  , colr(:,needsColumn));
-Nmask   = contains('Surgical masks', colr(:,needsColumn));
-Nglove  = contains('gloves', colr(:,needsColumn));
-Nsanit  = contains('hand sanitizer', colr(:,needsColumn));
-Nwipe   = contains('disinfecting wipes', colr(:,needsColumn));
-Ntherm  = contains('thermometers', colr(:,needsColumn));
-Nboot   = contains('Disposable booties', colr(:,needsColumn));
-Nhome   = contains('Homemade Masks', colr(:,needsColumn));
-Nshield = contains('face shields', colr(:,needsColumn));
-Nprint  = contains('printed or makerspace', colr(:,needsColumn));
+Ngown   = contains('gown', colSmall(:,needsColumn));
+Nn95    = contains('N95s'  , colSmall(:,needsColumn));
+Nmask   = contains('Surgical masks', colSmall(:,needsColumn));
+Nglove  = contains('gloves', colSmall(:,needsColumn));
+Nsanit  = contains('hand sanitizer', colSmall(:,needsColumn));
+Nwipe   = contains('disinfecting wipes', colSmall(:,needsColumn));
+Ntherm  = contains('thermometers', colSmall(:,needsColumn));
+Nboot   = contains('Disposable booties', colSmall(:,needsColumn));
+Nhome   = contains('Homemade Masks', colSmall(:,needsColumn));
+Nshield = contains('face shields', colSmall(:,needsColumn));
+Nprint  = contains('printed or makerspace', colSmall(:,needsColumn));
 
 
 
