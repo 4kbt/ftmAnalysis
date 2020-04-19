@@ -16,10 +16,10 @@ set key noauto bottom left
 set arrow 1 from 8.5,1 to 8.5,1000 lt 0 nohead
 set arrow 2 from 13.5,1 to 13.5,1000 lt 0 nohead
 
-set label 3 "GetUsPPE\ngoes internal" at 4,2.5 center front tc lt 9
+set label 3 "Partner intake\ngoes internal" at 4,2.5 center front tc lt 9
 set arrow 3 from 6,2.5 to 8.5,2.5 lt 9 lw 2 head filled
 
-set label 4 "GetUsPPE\nadds link" at 15.7,2 center front tc lt 9
+set label 4 "Partner\nadds link" at 15.7,2 center front tc lt 9
 set arrow 4 from 15,2.5 to 13.5,4 lt 9 lw 2 head filled
 
 set label 5 "Calling\nSeattle\nhospitals" at -7.7,4.5 center front tc lt 9
