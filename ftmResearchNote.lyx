@@ -1,0 +1,474 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "helvet" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Insights from FindTheMasks-US Data, April 19, 2020
+\end_layout
+
+\begin_layout Author
+FindTheMasks Team
+\end_layout
+
+\begin_layout Standard
+Since March 19, FindTheMasks.com has aggregated and curated drop-off information
+ for Personal Protective Equipment (PPE) for healthcare workers across the
+ United States and around the world (
+\begin_inset CommandInset href
+LatexCommand href
+name "Canada"
+target "https://findthemasks.ca"
+literal "false"
+
+\end_inset
+
+, the 
+\begin_inset CommandInset href
+LatexCommand href
+name "EU"
+target "https://findthemasks.com/fr/"
+literal "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset href
+LatexCommand href
+name "Switzerland"
+target "https://findthemasks.com/ch/"
+literal "false"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset href
+LatexCommand href
+name "India"
+target "https://findthemasks.com/in/"
+literal "false"
+
+\end_inset
+
+).
+ This work has been done in partnership with many groups, including 
+\begin_inset CommandInset href
+LatexCommand href
+name "ProjectN95"
+target "https://www.projectn95.org/"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "GetUsPPE.org"
+target "https://getusppe.org/"
+literal "false"
+
+\end_inset
+
+.
+ Our mission is to provide continuously-updated maps of local PPE need.
+ Our published US data are freely available at findthemasks.com/data-us.json
+ , with similar files for other countries.
+ 
+\end_layout
+
+\begin_layout Standard
+This is a quick look at our 3,800+ entry United States dataset.
+ We want to share with you some of the inferences we have made so far.
+ This document is for both the curious reader and those analysts who use
+ our data.
+\end_layout
+
+\begin_layout Section*
+FindTheMasks data
+\end_layout
+
+\begin_layout Standard
+Each time a potential recipient fills in our 
+\begin_inset CommandInset href
+LatexCommand href
+name "form"
+target "https://findthemasks.com/us/donation-form?locale=en-US"
+literal "false"
+
+\end_inset
+
+, their information appears as a new row in our database.
+ Human moderators 
+\begin_inset CommandInset href
+LatexCommand href
+name "check it"
+target "https://github.com/findthemasks/findthemasks/wiki/Data-Quality-Procedure"
+literal "false"
+
+\end_inset
+
+ for clarity and accuracy.
+ We work to remove duplicate entries and update or take-down entries at
+ the request of recipients.
+ This process favors speed and accuracy in merging entries over maintaining
+ the provenance of individual entries.
+ We have original copies of the form-entry data, but the analysis presented
+ today is from our published dataset.
+\end_layout
+
+\begin_layout Standard
+There are many forms of systematic uncertainty / bias that may affect conclusion
+s one can draw from these data.
+ The mix of organizations that submit to us has changed and expanded over
+ time.
+ What began with phone-calls to hospitals now sees requests from public
+ health organizations, some of the finest research hospitals in the country,
+ home healthcare organizations, travel nurses, emergency medical services,
+ clinics in jails, funeral homes, the services that wash the linen from
+ hospitals with COVID-19 patients, and beyond.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename approvedPlot.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FindTheMasks entries over time.
+ Explosive growth in the first few days forced us to adapt and grow to handle
+ the traffic.
+ New-submission traffic dropped sharply on April 8, when a partner redirected
+ submission traffic to an internal repository to better faciliate supply-side
+ matching.
+ The partner added a link to FTM on their intake page on April 13.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As FindTheMasks lists many non-hospital institutions (outpatient clinics,
+ senior care, home-care, skilled nursing facilities, mental health centers,
+ homes for the disabled, and more), it is important for you to understand
+ our changing mix of hospital and non-hospital needs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename orgType.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+In the earliest days, our dataset was primarily hospitals.
+ On March 25, we began asking recipients to categorize their organization,
+ plotted above.
+ As our traffic flow changes, and hospitals secure supply chains for PPE,
+ we expect to see even more non-hospital entries.
+ Days with fewer than ten new entries are excluded from our analysis.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+How are America's PPE needs changing over time?
+\end_layout
+
+\begin_layout Standard
+As the number of entries each day we receive varies greatly, it is hard
+ to see trends in the daily counts of PPE requests alone.
+ Instead, we'll show you the percentage of institutions that request each
+ kind of PPE each day.
+ Remember that only institutions/health-care workers that need PPE have
+ submitted donation requests to us.
+ If an institution is fully-stocked, we won't see them.
+ That said, 
+\series bold
+only 51 of the ~5,000 contacts we have received have asked to be removed
+\series default
+, most of the excess beyond 3,800 have been updates and duplicate entries
+ to our unique institutions.
+ We believe it is a fair assumption that almost all institutions in the
+ United States are starved for PPE.
+\end_layout
+
+\begin_layout Standard
+When you see a 
+\begin_inset Quotes eld
+\end_inset
+
+small
+\begin_inset Quotes erd
+\end_inset
+
+ number like 25% for 3-D-printed face shields, it means that one in four
+ of our recipients 
+\series bold
+wants
+\series default
+ homemade masks.
+ Multiplied by our 3,800 recipients, that's about a thousand institutions.
+ Odds are very good that you can find someone near you, whether they are
+ on our list or not, who will be intensely grateful for every kind of PPE
+ you might have.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename needs.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+FindTheMasks recipient's PPE needs over time.
+ Some of these trends are likely to be due to our changing mix of recipient-type
+s.
+ There are subtle trends in these data, but the overarching message is that
+ the PPE needs of institutions making PPE requests are almost unchanged
+ over time.
+ 
+\series bold
+There is still a huge PPE shortage.
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+In the last week, we are seeing an increase in the proportion of institutions
+ requesting home-made masks, sanitizer, wipes, and gloves.
+ There are weak downward trends in requests for N95 masks and surgical masks.
+ We do not know if this is due to a change in our institutional mix or if
+ recipients believe that donors just don't have them anymore.
+ We don't think it is because demand for N95s has been addressed substantially.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+How you can help!
+\end_layout
+
+\begin_layout Subsection*
+If you have PPE to donate
+\end_layout
+
+\begin_layout Standard
+Visit 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://findthemasks.com/"
+literal "false"
+
+\end_inset
+
+ and find an institution that can use your help! Our map and helpful filters
+ can help you find an institution in need quickly.
+\end_layout
+
+\begin_layout Subsection*
+If you need PPE
+\end_layout
+
+\begin_layout Standard
+Please fill in our 
+\begin_inset CommandInset href
+LatexCommand href
+name "form"
+target "https://findthemasks.com/us/donation-form?locale=en-US"
+literal "false"
+
+\end_inset
+
+! We'll add you to the map as quickly as we can.
+\end_layout
+
+\begin_layout Subsection*
+Share #findthemasks
+\end_layout
+
+\begin_layout Standard
+Share this post, or findthemasks.com, using #findthemasks! If you donate
+ PPE or receive PPE from a findthemasks donor, please post to social media
+ with the hashtag #findthemasksdonation so that we can better understand
+ how donations are flowing to recipients.
+\end_layout
+
+\begin_layout Standard
+Thank you so much for your support.
+ If you have PPE, there are thousands of institutions that need it.
+ Right now.
+\end_layout
+
+\begin_layout Section*
+Support
+\end_layout
+
+\begin_layout Standard
+We are very grateful for pro-level support from Smartling, Google Maps,
+ and Slack.
+ Jotform, Airtable, and SmartyStreets have contributed improvements that
+ are under development.
+ 
+\end_layout
+
+\begin_layout Standard
+We could not have done any of this work without volunteer support from a
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "team of 60+ volunteers"
+target "https://findthemasks.com/whoweare.html"
+literal "false"
+
+\end_inset
+
+ who have contributed time and lost a lot of sleep to make FindTheMasks
+ a reality.
+\end_layout
+
+\end_body
+\end_document
