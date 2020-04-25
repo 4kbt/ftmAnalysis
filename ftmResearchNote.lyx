@@ -82,7 +82,7 @@ Insights from FindTheMasks-US Data, April 19, 2020
 \end_layout
 
 \begin_layout Author
-FindTheMasks Team
+FindTheMasks Team (findthemasksdata@googlegroups.com)
 \end_layout
 
 \begin_layout Standard
@@ -125,7 +125,7 @@ literal "false"
 \end_inset
 
 ).
- This work has been done in partnership with many groups, including 
+ This work is in partnership with many groups, including 
 \begin_inset CommandInset href
 LatexCommand href
 name "ProjectN95"
@@ -144,15 +144,15 @@ literal "false"
 \end_inset
 
 .
- Our mission is to provide continuously-updated maps of local PPE need.
- Our published US data are freely available at findthemasks.com/data-us.json
+ Our mission is to provide up-to-date maps of PPE need.
+ Our curated US data are freely available at findthemasks.com/data-us.json
  , with similar files for other countries.
  
 \end_layout
 
 \begin_layout Standard
 This is a quick look at our 3,800+ entry United States dataset.
- We want to share with you some of the inferences we have made so far.
+ We want to share some simple inferences we have made so far.
  This document is for both the curious reader and those analysts who use
  our data.
 \end_layout
@@ -182,24 +182,24 @@ literal "false"
 \end_inset
 
  for clarity and accuracy.
- We work to remove duplicate entries and update or take-down entries at
- the request of recipients.
+ We remove duplicate entries and update or take-down entries at the request
+ of recipients.
  This process favors speed and accuracy in merging entries over maintaining
  the provenance of individual entries.
- We have original copies of the form-entry data, but the analysis presented
- today is from our published dataset.
+ We store original copies of form-entry data, but the analysis presented
+ today uses our curated dataset.
 \end_layout
 
 \begin_layout Standard
-There are many forms of systematic uncertainty / bias that may affect conclusion
-s one can draw from these data.
- The mix of organizations that submit to us has changed and expanded over
- time.
+There are systematic uncertainties and biases that may affect conclusions
+ one might draw from these data.
+ The mix of organizations that submit to us has changed and diversified
+ over time.
  What began with phone-calls to hospitals now sees requests from public
  health organizations, some of the finest research hospitals in the country,
  home healthcare organizations, travel nurses, emergency medical services,
- clinics in jails, funeral homes, the services that wash the linen from
- hospitals with COVID-19 patients, and beyond.
+ clinics in jails, funeral homes, services that wash the linen from hospitals
+ with COVID-19 patients, and beyond.
  
 \end_layout
 
@@ -225,12 +225,13 @@ status open
 
 \begin_layout Plain Layout
 FindTheMasks entries over time.
- Explosive growth in the first few days forced us to adapt and grow to handle
- the traffic.
+ Explosive growth in the first few days forced us to adapt and grow our
+ team to handle the traffic.
  New-submission traffic dropped sharply on April 8, when a partner redirected
- submission traffic to an internal repository to better faciliate supply-side
+ submission traffic to a non-public repository to better faciliate supply-side
  matching.
- The partner added a link to FTM on their intake page on April 13.
+ The partner added a link to FTM on their intake page on April 13, restoring
+ some traffic.
 \end_layout
 
 \end_inset
@@ -246,8 +247,8 @@ FindTheMasks entries over time.
 \begin_layout Standard
 As FindTheMasks lists many non-hospital institutions (outpatient clinics,
  senior care, home-care, skilled nursing facilities, mental health centers,
- homes for the disabled, and more), it is important for you to understand
- our changing mix of hospital and non-hospital needs.
+ homes for the disabled, and more), it is important to understand our changing
+ mix of hospital and non-hospital institutions.
 \end_layout
 
 \begin_layout Standard
@@ -270,7 +271,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-In the earliest days, our dataset was primarily hospitals.
+In the earliest days, our recipients were primarily hospitals.
  On March 25, we began asking recipients to categorize their organization,
  plotted above.
  As our traffic flow changes, and hospitals secure supply chains for PPE,
@@ -292,6 +293,10 @@ In the earliest days, our dataset was primarily hospitals.
 How are America's PPE needs changing over time?
 \end_layout
 
+\begin_layout Subsection*
+PPE Needs
+\end_layout
+
 \begin_layout Standard
 As the number of entries each day we receive varies greatly, it is hard
  to see trends in the daily counts of PPE requests alone.
@@ -302,16 +307,16 @@ As the number of entries each day we receive varies greatly, it is hard
  If an institution is fully-stocked, we won't see them.
  That said, 
 \series bold
-only 51 of the ~5,000 contacts we have received have asked to be removed
+only 51 of the ~5,000 contacts we have received were removal requests
 \series default
 , most of the excess beyond 3,800 have been updates and duplicate entries
- to our unique institutions.
- We believe it is a fair assumption that almost all institutions in the
- United States are starved for PPE.
+ to entries already present in our database.
+ From our perspective, we believe it is a fair assumption that most healthcare
+ institutions in the United States are starved for PPE.
 \end_layout
 
 \begin_layout Standard
-When you see a 
+When you see in the plots below a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -329,6 +334,27 @@ wants
  Odds are very good that you can find someone near you, whether they are
  on our list or not, who will be intensely grateful for every kind of PPE
  you might have.
+\end_layout
+
+\begin_layout Standard
+For experts: The errorbars in these plots are computed using 
+\begin_inset Formula $1\sigma$
+\end_inset
+
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "population-proportion"
+target "https://en.wikipedia.org/wiki/Population_proportion"
+literal "false"
+
+\end_inset
+
+ uncertainties (
+\begin_inset Formula $z^{*}=1$
+\end_inset
+
+ in the Wikipedia notation) .
 \end_layout
 
 \begin_layout Standard
@@ -370,12 +396,12 @@ There is still a huge PPE shortage.
 \begin_inset Newline newline
 \end_inset
 
-In the last week, we are seeing an increase in the proportion of institutions
+In the last week, we have seen an increase in the proportion of institutions
  requesting home-made masks, sanitizer, wipes, and gloves.
  There are weak downward trends in requests for N95 masks and surgical masks.
- We do not know if this is due to a change in our institutional mix or if
- recipients believe that donors just don't have them anymore.
- We don't think it is because demand for N95s has been addressed substantially.
+ We do not yet know if this is due to a change in our institutional mix
+ or a statistical fluctuation.
+ We don't believe it is because demand for N95s has been substantially addressed.
 \end_layout
 
 \end_inset
@@ -386,10 +412,75 @@ In the last week, we are seeing an increase in the proportion of institutions
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection*
+Significant Shortages
+\end_layout
+
+\begin_layout Standard
+On March 25, we began asking our recipients to tell us, in free text, about
+ their most significant shortages.
+ These data are not found in our public releases, as we have promised to
+ keep them private.
+ Nevertheless, we can tell you about them in aggregate.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename shortages.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+The most-significant shortages expressed by FindTheMasks recipients.
+ In addition to masks, gowns/coveralls/bunny-suits are in short supply in
+ about 40% of our recipient's institutions.
+ We aren't yet sure whether the recent trends in gloves/sanitizer/wipes
+ as a shortage are due to a change in our submitter-mix, or an emerging
+ trend.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The story at hand is a simple one: our healthcare workers need PPE of all
+ kinds.
+ The most-desperate needs among our recipients are N95 masks, masks of all
+ kinds, and gowns.
+ Some recipients are completely out of at least one of the above, and are
+ treating patients without protection.
 \end_layout
 
 \begin_layout Section*
-How you can help!
+How can you help?
 \end_layout
 
 \begin_layout Subsection*
@@ -407,6 +498,26 @@ literal "false"
 
  and find an institution that can use your help! Our map and helpful filters
  can help you find an institution in need quickly.
+ If you have more than a few hundred items of PPE, please contact our partners
+ at 
+\begin_inset CommandInset href
+LatexCommand href
+name "projectN95.org"
+target "https://www.projectn95.org/"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "getusppe.org"
+target "https://getusppe.org/"
+literal "false"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection*
@@ -424,6 +535,25 @@ literal "false"
 \end_inset
 
 ! We'll add you to the map as quickly as we can.
+ Institutions should register with our partners at 
+\begin_inset CommandInset href
+LatexCommand href
+name "projectN95.org"
+target "https://www.projectn95.org/"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "getusppe.org"
+target "https://getusppe.org/"
+literal "false"
+
+\end_inset
+
+, too.
 \end_layout
 
 \begin_layout Subsection*
@@ -450,9 +580,8 @@ Support
 \begin_layout Standard
 We are very grateful for pro-level support from Smartling, Google Maps,
  and Slack.
- Jotform, Airtable, and SmartyStreets have contributed improvements that
- are under development.
- 
+ Jotform, Airtable, and SmartyStreets have made contributions to improvements
+ that are under development.
 \end_layout
 
 \begin_layout Standard
@@ -468,6 +597,12 @@ literal "false"
 
  who have contributed time and lost a lot of sleep to make FindTheMasks
  a reality.
+\end_layout
+
+\begin_layout Standard
+Our hearts are with those on the front lines.
+ There are thousands more volunteers like us doing our very best to help
+ you.
 \end_layout
 
 \end_body

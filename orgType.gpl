@@ -17,7 +17,7 @@ set multiplot layout 2,1
 #set label 1 'PRELIMINARY' at screen 0.5,0.5 rotate by 30 center front textcolor rgb "#999999" font "Helvetica,50"
 
 set ylabel '%'
-set title 'Hospital fraction of all FTM entries. Errors are 1{/Symbol s}-population-proportion.'
+set title 'Hospital fraction of all FindTheMasks entries'
 
 pl [startDay:endDay][0:100] fn u 1:($2>statCutoff?$3*100 :1/0):(100*sqrt( $3 * (1-$3) / $2 )) w yerr lt 3 pt 7 
 
@@ -57,7 +57,7 @@ unset ylabel
 set xlabel 'date'
 set logsc y
 
-set title 'Number of still-approved entries daily'
+set title 'Number of curated entries daily'
 pl [startDay:endDay][1:] fn u 1:2  w p lt -1 pt 7,\
 	statCutoff lt 0 
 
