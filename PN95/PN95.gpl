@@ -1,0 +1,37 @@
+set term postscript enhanced solid color size 10,20
+set output 'PN95.eps'
+
+set xlabel 'days of April 2020'
+set ylabel 'number'
+
+set logsc y 
+
+fn = 'data.dat'
+
+set colors classic
+
+set grid
+
+set key noauto
+
+set multiplot layout 5,1 title 'Replotting ProjectN95 frontline data'
+
+set label 1 'FTM-PRELIMINARY' at 5,1 center textcolor rgb "#999999" font "Helvetica,40"
+
+set tit 'Respirators'
+pl fn index 0 u ($1/86400000-18353):($2 == 0 ? 0.01*(int($1/1000)%10 ):$2 * ( ( 1 + ( (int($1/1000) % 10 ) / 10.0) )/2.0 + 0.25))  w p pt 7 ps 0.2 lt 3
+#pl fn index 0 u ($1/86400000-18353):((1+ ( (int($1/1000) % 10 ) / 10.0) )/2.0 + 0.25) w p pt 7 ps 0.2 lt 3
+
+set tit 'Gowns'
+pl fn index 1 u ($1/86400000-18353):($2 == 0 ? 0.01*(int($1/1000)%10 ):$2 * ( ( 1 + ( (int($1/1000) % 10 ) / 10.0) )/2.0 + 0.25))  w p pt 7 ps 0.2 lt 3
+
+set tit 'Ventilators'
+pl fn index 2 u ($1/86400000-18353):($2 == 0 ? 0.01*(int($1/1000)%10 ):$2 * ( ( 1 + ( (int($1/1000) % 10 ) / 10.0) )/2.0 + 0.25))  w p pt 7 ps 0.2 lt 3
+
+set tit 'Masks'
+pl fn index 3 u ($1/86400000-18353):($2 == 0 ? 0.01*(int($1/1000)%10 ):$2 * ( ( 1 + ( (int($1/1000) % 10 ) / 10.0) )/2.0 + 0.25))  w p pt 7 ps 0.2 lt 3
+
+set tit 'Shields'
+pl fn index 4 u ($1/86400000-18353):($2 == 0 ? 0.01*(int($1/1000)%10 ):$2 * ( ( 1 + ( (int($1/1000) % 10 ) / 10.0) )/2.0 + 0.25))  w p pt 7 ps 0.2 lt 3
+
+unset multiplot
