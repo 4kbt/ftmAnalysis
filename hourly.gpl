@@ -1,0 +1,15 @@
+set term postscript enhanced solid color
+set output 'hourly.eps'
+
+set title 'daily FTM submission traffic March 20 - April 19'
+
+set ylabel 'Number of submissions'
+set xlabel 'hour of day (Pacific ?)'
+
+set key noauto
+
+set logsc y
+
+set colors classic
+
+pl 'hourly.dat' u ($1*24):2 w p pt 7 ps 0.4 lt 3
